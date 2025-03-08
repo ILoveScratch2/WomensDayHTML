@@ -13,62 +13,77 @@
 
         body {
             font-family: 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #f8e1e8 0%, #ffd1dc 100%);
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            padding: 50px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1),
+                      0 10px 25px rgba(244, 143, 177, 0.15);
+            padding: 60px;
             max-width: 600px;
             width: 90%;
             text-align: center;
             animation: fadeIn 2s ease-out;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .heart {
-            color: #ff6b95;
-            font-size: 55px;
+            color: #e91e63;
+            font-size: 60px;
             margin: 20px 0;
             animation: pulse 2s infinite ease-in-out;
+            text-shadow: 0 0 15px rgba(233, 30, 99, 0.3);
         }
 
         h1 {
-            color: #ff6b95;
-            font-size: 2.8em;
-            margin-bottom: 25px;
-            font-weight: 300;
-            letter-spacing: 2px;
+            color: #e91e63;
+            font-size: 3em;
+            margin-bottom: 30px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .message {
-            color: #666;
-            font-size: 1.3em;
+            color: #424242;
+            font-size: 1.4em;
             line-height: 2;
-            margin: 35px 0;
-            letter-spacing: 1px;
+            margin: 40px 0;
+            letter-spacing: 1.2px;
         }
 
         .flowers {
-            font-size: 28px;
-            margin: 25px 0;
-            letter-spacing: 8px;
+            font-size: 32px;
+            margin: 30px 0;
+            letter-spacing: 12px;
+            animation: floatFlowers 3s ease-in-out infinite;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.15); }
+            50% { transform: scale(1.2); }
             100% { transform: scale(1); }
+        }
+
+        @keyframes floatFlowers {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
     </style>
 </head>
